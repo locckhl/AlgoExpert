@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#root {
+  background-color: #F6F9FC;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.review-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
+.review-header h2 {
+  text-align: center;
+}
+
+.review-header p {
+  max-width: 50%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .review-header p {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .review-header p {
+    max-width: 75%;
+  }
+}
+
+.review-header a {
+  color: white;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+}
+
+.review-content {
+  padding: 2rem 3rem;
+}
+
+.review-content .block-main {
+  border-top: 4px solid #626ee3;
+  margin: 30px 5px 15px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 10px rgba(50, 50, 93, 0.1);
+          box-shadow: 0 2px 10px rgba(50, 50, 93, 0.1);
+  padding: 45px 20px 20px;
+  position: relative;
+  height: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review-content .block-main .block-ava {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.review-content .block-main .block-ava img {
+  width: 100%;
+}
+
+.review-content .block-main .block-logo img {
+  height: 2rem;
+}
+
+.review-content .block-main .block-review-container {
+  margin: 2rem 0;
+  overflow-y: scroll;
+  max-height: 250px;
+}
+/*# sourceMappingURL=style.css.map */

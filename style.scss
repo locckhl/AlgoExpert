@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+$XS:     480px;   
+$SM:     768px;  
+$MD:    1024px;   
+$XL:   1170px;
+
+@mixin Responsive($canvas) {
+    @if $canvas == XS {
+     @media only screen and (max-width: $XS) { @content; } 
+    }
+    @else if $canvas == SM {
+     @media only screen and (max-width: $SM) { @content; } 
+    }
+    @else if $canvas == MD {
+     @media only screen and (max-width: $MD) { @content; } 
+    }
+    @else if $canvas == XL {
+     @media only screen and (max-width: $XL) { @content; } 
+    }
+  }
+
+#root{
+    background-color: #F6F9FC;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.review-header{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    h2{
+        text-align: center;
+    }
+    p{
+        max-width: 50%;
+        margin: 3rem auto;
+        text-align: center;
+        @include Responsive(XS){
+            max-width: 100%;
+        }
+        @include Responsive(MD){
+            max-width: 75%;
+        }
+    }
+    a{
+        color: white;
+        margin: 0 auto;
+        padding: 1rem 3rem;
+    }
+}
+
+.review-content{
+    padding: 2rem 3rem;
+    .block-main{
+        border-top: 4px solid #626ee3;
+        margin: 30px 5px 15px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 2px 10px rgba(50,50,93,.1);
+        padding: 45px 20px 20px;
+        position: relative;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .block-ava{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 3px 5px 0 rgba(0,0,0,.4);
+            background-color: #fff;
+            border-radius: 50%;
+            // display: inline-block;
+            overflow: hidden;
+            img{
+                width: 100%;
+                // height: 60px;
+                // display: block;
+            }
+        }
+        .block-logo{
+            img{
+                height: 2rem;
+            }
+        }
+        .block-review-container{
+            margin: 2rem 0;
+            overflow-y: scroll;
+            max-height: 250px;
+        }
+    }
+}
